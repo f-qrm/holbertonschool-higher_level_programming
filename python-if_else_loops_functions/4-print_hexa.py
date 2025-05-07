@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for i in range(0, 99):
-    print(str(hex(i)))
+    print("{}". format(str(hex(i)), end=""))
