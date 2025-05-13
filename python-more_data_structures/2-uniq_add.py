@@ -4,4 +4,4 @@ def uniq_add(my_list=[]):
     total = 0
     for i in unique_integers:
         total += i
-    return(total)
+    return (total)
