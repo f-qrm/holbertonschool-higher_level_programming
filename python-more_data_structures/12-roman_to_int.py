@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if not roman_string or roman_string == None:
+        return 0
     new_dict = {
         'I': 1,
         'V': 5,
