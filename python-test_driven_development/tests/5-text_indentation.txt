@@ -1,0 +1,20 @@
+>>> print_square = __import__('4-print_square').print_square
+>>> text_indentation("Hello. How are you? I am fine:")
+Hello.
+
+How are you?
+
+I am fine:
+
+>>> text_indentation("No separators here")
+No separators here
+
+>>> text_indentation("")
+>>> text_indentation("  Leading and trailing spaces.  ")
+Leading and trailing spaces.
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+"""
