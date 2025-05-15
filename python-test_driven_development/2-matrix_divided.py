@@ -4,6 +4,8 @@ Function to divide all elements of a matrix by a given number.
 Checks input types and returns a new matrix with rounded values.
 Raises errors for invalid inputs or division by zero.
 """
+
+
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix
@@ -13,20 +15,24 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError
+    ("matrix must be a matrix (list of lists) of integers/floats")
     row_len = len(matrix[0])
     new_matrix = []
     for row in matrix:
         if not isinstance(row, list):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError
+        ("matrix must be a matrix (list of lists) of integers/floats")
         if len(row) != row_len:
-            raise TypeError("Each row of the matrix must have the same size")
+            raise TypeError
+        ("Each row of the matrix must have the same size")
         for i in row:
             if not isinstance(i, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError
+            ("matrix must be a matrix (list of lists) of integers/floats")
     for row in matrix:
         new_row = []
         for i in row:
-            new_row.append(round( i / div, 2))
+            new_row.append(round(i / div, 2))
         new_matrix.append(new_row)
     return new_matrix
