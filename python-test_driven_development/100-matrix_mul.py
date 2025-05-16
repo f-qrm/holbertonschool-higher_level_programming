@@ -1,5 +1,20 @@
 #!/usr/bin/python3
+"""
+Fonction de multiplication de matrices.
+"""
 def matrix_mul(m_a, m_b):
+    """
+    Multiplie deux matrices m_a et m_b et retourne le résultat sous forme d'une nouvelle matrice.
+    
+    Effectue plusieurs vérifications sur les entrées :
+    - m_a et m_b doivent être des listes de listes de nombres (int ou float).
+    - Les matrices ne doivent pas être vides.
+    - Toutes les lignes d'une même matrice doivent avoir la même taille.
+    - Le nombre de colonnes de m_a doit être égal au nombre de lignes de m_b.
+    
+    La multiplication se fait selon la règle classique de la multiplication matricielle.
+    
+    """
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
     if not isinstance(m_b, list):
