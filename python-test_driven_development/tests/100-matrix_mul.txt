@@ -24,3 +24,50 @@ TypeError: m_b must be a list
 Traceback (most recent call last):
     ...
 TypeError: m_a should contain only integers or floats
+
+>>> # Tests supplémentaires pour tous les cas d'erreur demandés :
+>>> try:
+...     matrix_mul([1, 2, 3], [[1, 2], [3, 4]])
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+TypeError: m_a must be a list of lists
+>>> try:
+...     matrix_mul([[1, 2], [3, 4]], [1, 2, 3])
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+TypeError: m_b must be a list of lists
+>>> try:
+...     matrix_mul([], [[1, 2], [3, 4]])
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+ValueError: m_a can't be empty
+>>> try:
+...     matrix_mul([[1, 2], [3, 4]], [])
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+ValueError: m_b can't be empty
+>>> try:
+...     matrix_mul([[1, 2], [3, 4]], [[1, 2], ['a', 4]])
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+TypeError: m_b should contain only integers or floats
+>>> try:
+...     matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+TypeError: each row of m_a must be of the same size
+>>> try:
+...     matrix_mul([[1, 2], [3, 4]], [[1, 2], [3]])
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+TypeError: each row of m_b must be of the same size
+>>> try:
+...     matrix_mul()
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+>>> try:
+...     matrix_mul([[1, 2]])
+... except Exception as e:
+...     print(type(e).__name__ + ":", e)
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'

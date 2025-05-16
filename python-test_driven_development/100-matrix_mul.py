@@ -2,18 +2,22 @@
 """
 Fonction de multiplication de matrices.
 """
+
+
 def matrix_mul(m_a, m_b):
     """
-    Multiplie deux matrices m_a et m_b et retourne le résultat sous forme d'une nouvelle matrice.
-    
+    Multiplie deux matrices m_a et m_b et retourne le résultat
+    sous forme d'une nouvelle matrice.
     Effectue plusieurs vérifications sur les entrées :
-    - m_a et m_b doivent être des listes de listes de nombres (int ou float).
+    - m_a et m_b doivent être des listes de listes de nombres
+    (int ou float).
     - Les matrices ne doivent pas être vides.
-    - Toutes les lignes d'une même matrice doivent avoir la même taille.
-    - Le nombre de colonnes de m_a doit être égal au nombre de lignes de m_b.
-    
-    La multiplication se fait selon la règle classique de la multiplication matricielle.
-    
+    - Toutes les lignes d'une même matrice doivent avoir la même
+    taille.
+    - Le nombre de colonnes de m_a doit être égal au nombre
+    de lignes de m_b.
+    La multiplication se fait selon la règle classique de la
+    multiplication matricielle.
     """
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
@@ -47,7 +51,8 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     nombre_lignes = len(m_a)
     nombre_colonnes = len(m_b[0])
-    new_matrix = [[0 for _ in range(nombre_colonnes)]for _ in range(nombre_lignes)]
+    new_matrix = ([[0 for _ in range(nombre_colonnes)]
+                   for _ in range(nombre_lignes)])
     for i in range(nombre_lignes):
         for j in range(nombre_colonnes):
             for k in range(len(m_b)):
