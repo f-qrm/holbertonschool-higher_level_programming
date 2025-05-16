@@ -1,8 +1,11 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Hello. How are you? I am fine:")
 Hello.
+<BLANKLINE>
 How are you?
+<BLANKLINE>
 I am fine:
+<BLANKLINE>
 >>> text_indentation("No separators here")
 No separators here
 >>> text_indentation("")
