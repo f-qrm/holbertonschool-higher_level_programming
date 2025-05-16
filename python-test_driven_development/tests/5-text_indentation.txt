@@ -10,7 +10,8 @@ I am fine:
 No separators here
 >>> text_indentation("")
 >>> text_indentation("  Leading and trailing spaces.  ")
-Leading and trailing spaces.
+  Leading and trailing spaces.  
+  <BLANKLINE>  
 >>> text_indentation(123)
 Traceback (most recent call last):
     ...
