@@ -22,4 +22,4 @@ class Square:
             size (int): The size (length of a side) of the square.
         Currently, this value is not used or stored.
         """
-        self.__size
+        self.__size = size

@@ -9,14 +9,16 @@ It includes validation to ensure the size is a non-negative integer.
 class Square:
     """
     Represents a square with a given size.
-    The class validates that the size is an integer and greater than or equal to 0.
+    The class validates that the size is an integer and greater than
+    or equal to 0.
     """
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """
         Initializes a Square instance.
 
         Args:
-            size (int): The size of the square. Must be a non-negative integer.
+            size (int): The size of the square. Must be a non-negative
+            integer.
 
         Raises:
             TypeError: If size is not an integer.
