@@ -3,7 +3,8 @@
 
 The Square class is used to represent a square in geometry.
 It includes an initializer method that accepts the size of the square.
-Currently, it does not store or use the size in any way, but serves as a base for future development.
+Currently, it does not store or use the size in any way, but serves as
+a base for future development.
 """
 
 
@@ -14,7 +15,7 @@ class Square:
     At this stage, it only accepts a size parameter during initialization,
     but does not store or process it.
     """
-    def __init__ (self, size):
+    def __init__(self, size):
         """Initializes a new Square instance.
 
         Args:
