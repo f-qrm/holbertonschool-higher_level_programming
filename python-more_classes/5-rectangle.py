@@ -166,12 +166,14 @@ class Rectangle:
         """
         Detect instance deletion and print a message.
 
-        This method is called when an instance of Rectangle is about to be destroyed
-        (garbage collected). It prints the message "Bye rectangle..." to notify
-        that the instance is being deleted.
+        This method is called when an instance of Rectangle
+        is about to be destroyed
+        (garbage collected). It prints the message "Bye rectangle..."
+        to notify that the instance is being deleted.
 
         Note:
-            This method helps track the deletion of Rectangle instances and can be
+            This method helps track the deletion of Rectangle
+            instances and can be
             useful for debugging or cleanup purposes.
         """
         print("Bye rectangle...")
