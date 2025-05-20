@@ -20,6 +20,7 @@ class Rectangle:
         height(self, value): Sets the height, validating the value.
     """
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance.
@@ -136,7 +137,7 @@ class Rectangle:
             return ""
         lines = []
         for i in range(self.height):
-            lines.append("#" * self.width)
+            lines.append(str(self.print_symbol) * self.width)
         return "\n".join(lines)
 
     def __repr__(self):
@@ -180,3 +181,49 @@ class Rectangle:
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+
+        """
+        Compare deux rectangles et retourne celui qui a la plus grande aire.
+        Si les aires sont égales, retourne rect_1.
+
+        Args:
+            rect_1 (Rectangle): Le premier rectangle.
+            rect_2 (Rectangle): Le second rectangle.
+
+        Raises:
+            TypeError: Si rect_1 ou rect_2 n'est pas une instance de Rectangle.
+
+        Returns:
+            Rectangle: Le rectangle avec la plus grande aire ou rect_1
+            si égalité.
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
+    @classmethod
+    def square(cls, size=0):
+        """
+        Crée un nouveau rectangle carré avec largeur et hauteur égales.
+
+        Args:
+            size (int): La taille du côté du carré (largeur et hauteur). Par défaut 0.
+
+        Returns:
+            Rectangle: Une nouvelle instance de Rectangle où width == height == size.
+
+        Exemple:
+            >>> square = Rectangle.square(5)
+            >>> print(square.width)
+            5
+            >>> print(square.height)
+            5
+        """
+        return cls(size,size)
