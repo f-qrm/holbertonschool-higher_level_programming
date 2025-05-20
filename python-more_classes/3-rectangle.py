@@ -103,7 +103,7 @@ class Rectangle:
             int: The perimeter of the rectangle, or 0 if width or height is 0.
         """
 
-        if (self.width or self.height) == 0:
+        if (self.width == 0) or (self.height == 0):
             return 0
         else:
             return 2 * (self.width + self.height)
@@ -130,7 +130,7 @@ class Rectangle:
             ####
             ####
         """
-        if (self.width or self.height) == 0:
+        if (self.width == 0) or (self.height == 0):
             return ""
         lines = []
         for i in range(self.height):
