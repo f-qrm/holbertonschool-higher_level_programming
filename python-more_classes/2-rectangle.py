@@ -40,7 +40,7 @@ class Rectangle:
             int: The current width.
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
@@ -66,7 +66,7 @@ class Rectangle:
             int: The current height.
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -83,6 +83,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
     def area(self):
         """
         Calculate and return the area of the rectangle.
@@ -91,6 +92,7 @@ class Rectangle:
             int: The area of the rectangle.
         """
         return self.width * self.height
+
     def perimeter(self):
         """
         Calculate and return the perimeter of the rectangle.

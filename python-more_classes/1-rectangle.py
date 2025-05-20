@@ -20,7 +20,7 @@ class Rectangle:
         height(self, value): Sets the height, validating the value.
     """
 
-    def __init__ (self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance.
         Args:
             width (int, optional): The width of the rectangle. Defaults to 0.
@@ -40,7 +40,7 @@ class Rectangle:
             int: The current width.
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
@@ -66,7 +66,7 @@ class Rectangle:
             int: The current height.
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
