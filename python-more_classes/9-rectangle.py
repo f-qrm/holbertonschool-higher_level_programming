@@ -214,10 +214,12 @@ class Rectangle:
         Crée un nouveau rectangle carré avec largeur et hauteur égales.
 
         Args:
-            size (int): La taille du côté du carré (largeur et hauteur). Par défaut 0.
+            size (int): La taille du côté du carré (largeur et hauteur).
+            Par défaut 0.
 
         Returns:
-            Rectangle: Une nouvelle instance de Rectangle où width == height == size.
+            Rectangle: Une nouvelle instance de Rectangle où
+            width == height == size.
 
         Exemple:
             >>> square = Rectangle.square(5)
@@ -226,4 +228,4 @@ class Rectangle:
             >>> print(square.height)
             5
         """
-        return cls(size,size)
+        return cls(size, size)
