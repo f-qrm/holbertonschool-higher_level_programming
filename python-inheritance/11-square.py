@@ -44,13 +44,14 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
     """
     Rectangle class inherits from BaseGeometry and represents a rectangle.
 
-    It uses integer_validator to ensure width and height are valid integers > 0.
+    It uses integer_validator to ensure width and height are valid
+    integers > 0.
     """
-
 
     def __init__(self, width, height):
         """
@@ -73,16 +74,26 @@ class Rectangle(BaseGeometry):
             int: The area (width * height)
         """
         return self.__width * self.__height
+
     def __str__(self):
+        """
+        Returns a string representation of the square.
+
+        Format: [Square] size/size
+
+        Returns:
+            str: The string describing the square
+        """
         return (f"[Rectangle] {self.__width}/{self.__height}")
+
 
 class Square(Rectangle):
     """
     Rectangle class inherits from BaseGeometry and represents a rectangle.
 
-    It uses integer_validator to ensure width and height are valid integers > 0.
+    It uses integer_validator to ensure width and height are valid
+    integers > 0.
     """
-
 
     def __init__(self, size):
         """
