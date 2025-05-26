@@ -15,6 +15,8 @@ class BaseGeometry:
     any subclass that inherits from it. Calling `area()` directly
     will raise an Exception, indicating that the method is not implemented.
     """
+
+
     def area(self):
         """
         Raises an Exception to indicate that the method is not implemented.
@@ -54,13 +56,32 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """
-        Initializes a rectangle with validated width and height.
+        Initializes a square with validated size.
 
         Args:
-            width (int): The width of the rectangle
-            height (int): The height of the rectangle
+            size (int): The size of the square's sides
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+    def area(self):
+        """
+        Computes the area of the rectangle.
+
+        Returns:
+            int: The area (width * height)
+        """
+        return self.__width * self.__height
+
+    def __str__(self):
+        """
+        Returns a string representation of the rectangle.
+
+        Format: [Rectangle] width/height
+
+        Returns:
+            str: The string describing the rectangle
+        """
+        return (f"[Rectangle] {self.__width}/{self.__height}")

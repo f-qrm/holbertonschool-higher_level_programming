@@ -14,4 +14,10 @@ class MyList(list):
     the list elements in ascending order, without altering the list itself.
     """
     def print_sorted(self):
+        """
+        Prints the list elements in ascending sorted order.
+
+        The original list remains unchanged. This method simply uses
+        the built-in `sorted()` function to sort and print the elements.
+        """
         print(sorted(self))

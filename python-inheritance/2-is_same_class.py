@@ -20,16 +20,5 @@ def is_same_class(obj, a_class):
     Returns:
         bool: True if `obj` is a direct instance of `a_class`,
               False otherwise (even if `obj` is an instance of a subclass).
-
-    Example:
-        >>> class Animal:
-        ...     pass
-        >>> class Dog(Animal):
-        ...     pass
-        >>> rex = Dog()
-        >>> is_exact_instance(rex, Dog)
-        True
-        >>> is_exact_instance(rex, Animal)
-        False
     """
     return type(obj) is a_class
