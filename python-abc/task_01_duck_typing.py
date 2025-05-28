@@ -125,10 +125,11 @@ class Rectangle(Shape):
 
 def shape_info(forme):
     """
-        Print the area and perimeter of a shape instance.
+    Print the area and perimeter of any object that implements
+    area() and perimeter() methods.
 
-        Args:
-            forme (Shape): An instance of a class that inherits from Shape.
+    Args:
+        forme: Any object with area() and perimeter() methods.
     """
     print("Area: {}".format(forme.area()))
     print("Perimeter: {}".format(forme.perimeter()))
