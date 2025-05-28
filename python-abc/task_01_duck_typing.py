@@ -16,7 +16,7 @@ There is also a helper function `shape_info` that takes a shape instance
 and prints its area and perimeter.
 """
 from abc import ABC, abstractmethod
-import math
+from math import pi
 
 
 class Shape(ABC):
@@ -73,7 +73,7 @@ class Circle(Shape):
         Returns:
             float: The area of the circle.
         """
-        return math.pi * self.radius ** 2
+        return pi * self.radius ** 2
 
     def perimeter(self):
         """
@@ -82,7 +82,7 @@ class Circle(Shape):
         Returns:
             float: The perimeter of the circle.
         """
-        return 2 * math.pi * self.radius
+        return 2 * pi * self.radius
 
 
 class Rectangle(Shape):
@@ -129,12 +129,6 @@ def shape_info(forme):
 
         Args:
             forme (Shape): An instance of a class that inherits from Shape.
-
-        Example:
-            >>> c = Circle(3)
-            >>> shape_info(c)
-            Area: 28.274333882308138
-            Perimeter: 18.84955592153876
     """
     print(f"Area: {forme.area()}")
     print(f"Perimeter: {forme.perimeter()}")
