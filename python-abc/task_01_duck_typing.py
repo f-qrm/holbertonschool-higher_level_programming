@@ -73,7 +73,7 @@ class Circle(Shape):
         Returns:
             float: The area of the circle.
         """
-        return pi * (self.radius ** 2)
+        return pi * abs(self.radius) ** 2
 
     def perimeter(self):
         """
@@ -82,7 +82,7 @@ class Circle(Shape):
         Returns:
             float: The perimeter of the circle.
         """
-        return (self.radius * 2) * pi
+        return abs(self.radius) * 2 * pi
 
 
 class Rectangle(Shape):
