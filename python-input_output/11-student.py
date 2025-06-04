@@ -3,8 +3,8 @@
 11-student.py
 
 This module defines a Student class with attributes, a method to retrieve
-a dictionary representation of the instance (optionally filtered by attributes),
-and a method to reload attributes from a given JSON dictionary.
+a dictionary representation of the instance (optionally filtered by
+attributes) and a method to reload attributes from a given JSON dictionary.
 """
 
 
@@ -43,7 +43,8 @@ class Student:
                                     returned dictionary. Defaults to None.
 
         Returns:
-            dict: Dictionary containing the requested attributes of the student,
+            dict: Dictionary containing the requested attributes of the
+            student,
                   or all attributes if attrs is None or not a list.
         """
         if isinstance(attrs, list):
@@ -57,10 +58,12 @@ class Student:
 
     def reload_from_json(self, json):
         """
-        Replaces all attributes of the Student instance with those in the provided JSON dictionary.
+        Replaces all attributes of the Student instance with those in the
+        provided JSON dictionary.
 
         Args:
-            json (dict): A dictionary containing key-value pairs of attributes to set.
+            json (dict): A dictionary containing key-value pairs of attributes
+            to set.
         """
         for key, value in json.items():
             setattr(self, key, value)
