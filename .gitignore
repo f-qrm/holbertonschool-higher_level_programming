@@ -1,0 +1,20 @@
+# Ignorer les fichiers compilés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorer les fichiers de test temporaires
+*.log
+*.tmp
+
+# Ignorer les fichiers JSON générés
+*.json
+
+# Ignorer les environnements virtuels
+venv/
+env/
+
+# Ignorer les fichiers de sauvegarde d'éditeurs
+*.swp
+*~
