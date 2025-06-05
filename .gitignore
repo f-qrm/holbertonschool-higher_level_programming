@@ -18,3 +18,5 @@ env/
 # Ignorer les fichiers de sauvegarde d'éditeurs
 *.swp
 *~
+python-serialization/object.pkl
+.gitignore
