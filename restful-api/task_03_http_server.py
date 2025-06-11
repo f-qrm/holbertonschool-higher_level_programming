@@ -46,23 +46,23 @@ class Server(http.server.BaseHTTPRequestHandler):
         """
         if self.path == '/':
             self.send_response(200)
-            self.send_header('content-type', 'text/plain')
+            self.send_header('Content-Type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b'Hello, this is a simple API!')
+            self.wfile.write('Hello, this is a simple API!'.encode("utf-8"))
         elif self.path == '/data':
             self.send_response(200)
-            self.send_header('content-type', 'application/json')
+            self.send_header('Content-Type', 'application/json')
             self.end_headers()
-            dict = {"name": "John", "age": 30, "city": "New York"}
-            self.wfile.write(json.dumps(dict).encode("utf-8"))
+            data = {"name": "John", "age": 30, "city": "New York"}
+            self.wfile.write(json.dumps(data).encode("utf-8"))
         elif self.path == '/status':
             self.send_response(200)
-            self.send_header('content-type', 'text/plain')
+            self.send_header('Content-Type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b"OK")
+            self.wfile.write("OK".encode("utf-8"))
         elif self.path == '/info':
             self.send_response(200)
-            self.send_header('content-type', 'application/json')
+            self.send_header('Content-Type', 'application/json')
             self.end_headers()
             info = {
                 "version": "1.0",
@@ -71,9 +71,9 @@ class Server(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(info).encode("utf-8"))
         else:
             self.send_response(404)
-            self.send_header('content-type', 'application/json')
+            self.send_header('Content-Type', 'text/plain')
             self.end_headers()  
-            self.wfile.write(b"Not Found")
+            self.wfile.write("Not Found".encode("utf-8"))
 
 if __name__ == "__main__":
     with socketserver.TCPServer(('', 8000), Server) as httpd:
