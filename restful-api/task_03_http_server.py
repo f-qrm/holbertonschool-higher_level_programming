@@ -21,8 +21,6 @@ import http.server
 import socketserver
 import json
 
-port = 8000
-
 
 class Server(http.server.BaseHTTPRequestHandler):
     """
@@ -68,6 +66,6 @@ class Server(http.server.BaseHTTPRequestHandler):
             self.end_headers()  
             self.wfile.write(b"Not Found")
 
-
-with socketserver.TCPServer(('', 8000), Server) as httpd:
-    httpd.serve_forever()
+if __name__ == "__main__":
+    with socketserver.TCPServer(('', 8000), Server) as httpd:
+        httpd.serve_forever()
