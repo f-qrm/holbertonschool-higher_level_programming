@@ -73,7 +73,7 @@ class Server(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header('Content-Type', 'text/plain')
             self.end_headers()
-            self.wfile.write("Not Found".encode("utf-8"))
+            self.wfile.write("Endpoint not found".encode("utf-8"))
 
 
 if __name__ == "__main__":
