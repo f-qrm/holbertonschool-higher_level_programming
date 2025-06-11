@@ -72,8 +72,9 @@ class Server(http.server.BaseHTTPRequestHandler):
         else:
             self.send_response(404)
             self.send_header('Content-Type', 'text/plain')
-            self.end_headers()  
+            self.end_headers()
             self.wfile.write("Not Found".encode("utf-8"))
+
 
 if __name__ == "__main__":
     with socketserver.TCPServer(('', 8000), Server) as httpd:
