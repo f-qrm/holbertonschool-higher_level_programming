@@ -60,6 +60,15 @@ class Server(http.server.BaseHTTPRequestHandler):
             self.send_header('content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"OK")
+        elif self.path == '/info':
+            self.send_response(200)
+            self.send_header('content-type', 'application/json')
+            self.end_headers()
+            info = {
+                "version": "1.0",
+                "description": "A simple API built with http.server"
+            }
+            self.wfile.write(json.dumps(info).encode("utf-8"))
         else:
             self.send_response(404)
             self.send_header('content-type', 'application/json')
