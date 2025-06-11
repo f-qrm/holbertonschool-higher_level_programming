@@ -17,11 +17,14 @@ Classes:
 Usage:
     Run the script to start the server on port 8000.
 """
-from http.server import *
+import http.server
+import socketserver
 import json
 
+port = 8000
 
-class Server(BaseHTTPRequestHandler):
+
+class Server(http.server.BaseHTTPRequestHandler):
     """
     HTTP request handler class that processes GET requests for predefined
     endpoints.
@@ -63,8 +66,8 @@ class Server(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header('content-type', 'application/json')
             self.end_headers()  
-            self.wfile.write(b"404 Not Found")
+            self.wfile.write(b"Not Found")
 
 
-port = HTTPServer(('', 8000), Server)
-port.serve_forever()
+with socketserver.TCPServer(('', 8000), Server) as httpd:
+    httpd.serve_forever()
