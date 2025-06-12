@@ -73,12 +73,12 @@ def adduser():
     """Add a new user to the system using JSON input."""
     new_user = request.get_json()
     if "username" in new_user:
-        user2 = new_user['username']
+        user2 = new_user["username"]
         users[user2] = new_user
         print(user2)
         return jsonify({"message": "User added", "user": new_user}), 201
     else:
-        return jsonify({"error": "User not found"}), 400
+        return jsonify({"error": "Username is required"}), 400
 
 
 if __name__ == '__main__':
