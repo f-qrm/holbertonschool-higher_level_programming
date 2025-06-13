@@ -67,7 +67,7 @@ def basic_protected():
     Returns:
         Response: JSON message indicating access is granted.
     """
-    return jsonify("Basic Auth: Access Granted")
+    return jsonify("Basic Auth: Access Granted"), 200
 
 
 @app.route('/login', methods=['POST'])
