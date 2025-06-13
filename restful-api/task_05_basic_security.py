@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Flask API implementing HTTP Basic Authentication and JWT-based authentication.
 
@@ -67,7 +67,7 @@ def basic_protected():
     Returns:
         Response: JSON message indicating access is granted.
     """
-    return jsonify("Basic Auth: Access Granted"), 200
+    return "Basic Auth: Access Granted"
 
 
 @app.route('/login', methods=['POST'])
@@ -104,7 +104,7 @@ def jwt_protected():
     Returns:
         Response: JSON message indicating JWT access is granted.
     """
-    return jsonify("JWT Auth: Access Granted")
+    return "JWT Auth: Access Granted"
 
 
 @app.route('/admin-only', methods=['GET'])
@@ -120,7 +120,7 @@ def admin_only():
     verif = get_jwt_identity()
     if verif['role'] != 'admin':
         return jsonify({"error": "Admin access required"}), 403
-    return jsonify("Admin Access: Granted")
+    return "Admin Access: Granted"
 
 
 @jwt.unauthorized_loader
