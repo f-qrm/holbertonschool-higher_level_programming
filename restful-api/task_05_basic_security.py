@@ -25,7 +25,6 @@ from flask_jwt_extended import JWTManager
 from flask_jwt_extended import create_access_token
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import get_jwt_identity
-from flask_httpauth import current_user
 
 
 app = Flask(__name__)
@@ -68,7 +67,6 @@ def basic_protected():
     Returns:
         Response: JSON message indicating access is granted.
     """
-    user = current_user()
     return jsonify("Basic Auth: Access Granted")
 
 
