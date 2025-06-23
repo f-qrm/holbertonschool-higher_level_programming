@@ -23,7 +23,6 @@ env/
 *.bak
 
 # === MySQL dumps or config files ===
-*.sql
 *.cnf
 *.my.cnf
 
