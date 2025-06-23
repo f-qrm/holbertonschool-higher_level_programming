@@ -1,22 +1,78 @@
-# Ignorer les fichiers compilés
+# === Python ===
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+.Python
+
+# === Virtual environments ===
+.venv/
+venv/
+ENV/
+env/
+*.env
+*.venv
+
+# === Logs, DB, cache ===
+*.log
+*.sqlite3
+*.db
+*.bak
+
+# === MySQL dumps or config files ===
+*.sql
+*.cnf
+*.my.cnf
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
+*~
+
+# === VSCode / IDE ===
+.vscode/
+.idea/
+*.code-workspace
+
+# === Bytecode cache ===
 *.pyc
 *.pyo
 *.pyd
 
-# Ignorer les fichiers de test temporaires
-*.log
+# === Test reports / coverage ===
+htmlcov/
+.tox/
+.nox/
+coverage.*
+.cache/
+pytest_cache/
+nosetests.xml
+test-results/
+
+# === Build / dist / packaging ===
+build/
+dist/
+*.tar.gz
+*.egg-info/
+MANIFEST
+
+# === Secrets or sensitive files ===
+.env
+.env.*
+secrets.json
+
+# === Jupyter Notebooks checkpoints ===
+.ipynb_checkpoints/
+
+# === Temporary files ===
 *.tmp
-
-# Ignorer les fichiers JSON générés
-*.json
-
-# Ignorer les environnements virtuels
-venv/
-env/
-
-# Ignorer les fichiers de sauvegarde d'éditeurs
-*.swp
-*~
+*.temp
+*.bak
+*.old
+python-serialization/data.json
 python-serialization/object.pkl
-.gitignore
