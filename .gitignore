@@ -75,3 +75,4 @@ secrets.json
 *.old
 python-serialization/data.json
 python-serialization/object.pkl
+SQL_more_queries/hbtn_0d_tvshows.sql
