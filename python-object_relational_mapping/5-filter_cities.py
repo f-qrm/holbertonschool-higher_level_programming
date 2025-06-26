@@ -35,11 +35,13 @@ if __name__ == "__main__":
         port=3306
     )
     cur = conn.cursor()
-    cur.execute("SELECT cities.name FROM cities " \
-    "JOIN states ON cities.state_id = states.id " \
-    "WHERE states.name = %s ORDER BY cities.id ASC", (name_state,))
+    cur.execute(
+        "SELECT cities.name FROM cities " \
+        "JOIN states ON cities.state_id = states.id " \
+        "WHERE states.name = %s ORDER BY cities.id ASC",
+        (name_state,)
+    )
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    print(", ".join(row[0] for row in rows))
     cur.close()
     conn.close()
