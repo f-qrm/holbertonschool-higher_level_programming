@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 This script lists all cities from the database `hbtn_0e_4_usa` along with their
-corresponding state names. The results are sorted by the city ID in ascending order.
-
+corresponding state names. The results are sorted by the city ID in ascending
+order.
 Usage:
     ./4-cities_by_state.py <mysql_username> <mysql_password> <database_name>
 
