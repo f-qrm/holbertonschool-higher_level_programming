@@ -3,7 +3,8 @@
 Lists all cities of a given state from the database hbtn_0e_4_usa.
 
 Usage:
-    ./5-filter_cities.py <mysql_username> <mysql_password> <database_name> <state_name>
+    ./5-filter_cities.py <mysql_username> <mysql_password>
+    <database_name> <state_name>
 
 Arguments:
     mysql_username: MySQL server username (e.g. root)
