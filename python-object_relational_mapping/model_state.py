@@ -9,13 +9,9 @@ Classes:
 Attributes:
     Base (declarative_base): Base class for SQLAlchemy class definitions.
 """
-from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-import sys
 
-user = sys.argv[1]
-passwd = sys.argv[2]
-DB_name = sys.argv[3]
 
 Base = declarative_base()
 
