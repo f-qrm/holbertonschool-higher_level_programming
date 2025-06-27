@@ -4,7 +4,7 @@ Adds a new State object 'Louisiana' to the database hbtn_0e_6_usa
 and prints the new state's ID.
 
 Usage:
-    ./11-model_state_insert.py <mysql_username> <mysql_password> <database_name>
+    ./11-model_state_insert.py <mysql_username> <mysql_password><database_name>
 """
 import sys
 from model_state import Base, State
