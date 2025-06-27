@@ -4,7 +4,8 @@ This script connects to a MySQL database using SQLAlchemy and
 prints the first State object sorted by id from the 'states' table.
 
 Usage:
-    ./8-model_state_fetch_first.py <mysql_username> <mysql_password> <database_name>
+    ./8-model_state_fetch_first.py <mysql_username> <mysql_password>
+    <database_name>
 
 If no states are found in the database, it prints "Nothing".
 
