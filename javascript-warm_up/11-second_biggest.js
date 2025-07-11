@@ -1,10 +1,18 @@
 #!/usr/bin/node
-const argv = parseInt(process.argv[2]);
+const args = process.argv.slice(2).map(Number);
 
-function factorial (n) {
-  if (isNaN(n) || n <= 1) {
-    return 1;
+if (args.length <= 1) {
+  console.log(0);
+} else {
+  const sorted = args.sort((a, b) => b - a);
+  const max = sorted[0];
+
+  let secondBiggest = 0;
+  for (let i = 1; i < sorted.length; i++) {
+    if (sorted[i] < max) {
+      secondBiggest = sorted[i];
+      break;
+    }
   }
-  return n * factorial(n - 1);
+  console.log(secondBiggest);
 }
-console.log(factorial(argv));
