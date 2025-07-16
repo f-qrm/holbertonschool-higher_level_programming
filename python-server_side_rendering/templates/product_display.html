@@ -1,0 +1,30 @@
+<!doctype html>
+   <html lang="en">
+   <head>
+   </head>
+   <body>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        {% include 'header.html' %}
+       <h1>Products list</h1>
+       <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.name or product["name"] }}</td>
+                    <td>{{ product.category or product["category"] }}</td>
+                    <td>{{ product.price or product["price"] }}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+       </table>
+   </body>
+   </html>
