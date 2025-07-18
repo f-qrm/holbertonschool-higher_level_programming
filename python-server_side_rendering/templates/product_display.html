@@ -1,14 +1,14 @@
 <!doctype html>
-   <html lang="en">
-   <head>
-   </head>
-   <body>
-        {% if error %}
-            <p>{{ error }}</p>
-        {% endif %}
-        {% include 'header.html' %}
-       <h1>Products list</h1>
-       <table>
+<html lang="en">
+<head>
+</head>
+<body>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    {% include 'header.html' %}
+    <h1>Products list</h1>
+    <table>
         <thead>
             <tr>
                 <th>Name</th>
@@ -19,12 +19,12 @@
         <tbody>
             {% for product in products %}
                 <tr>
-                    <td>{{ product.name or product["name"] }}</td>
-                    <td>{{ product.category or product["category"] }}</td>
-                    <td>{{ product.price or product["price"] }}</td>
+                    <td>{{ product['name'] }}</td>
+                    <td>{{ product['category'] }}</td>
+                    <td>{{ product['price'] }}</td>
                 </tr>
-                {% endfor %}
+            {% endfor %}
         </tbody>
-       </table>
-   </body>
-   </html>
+    </table>
+</body>
+</html>
