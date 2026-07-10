@@ -5,12 +5,14 @@ Module for serializing and deserializing data to/from a JSON file.
 
 
 import json
+
+
 def serialize_and_save_to_file(data, filename):
     """
     Serializes a Python object and saves it to a JSON file.
 
-    This function converts a Python object (e.g., list, dict) to a JSON-formatted
-    string and writes it to a specified file.
+    This function converts a Python object (e.g., list, dict) to a
+    JSON-formatted string and writes it to a specified file.
 
     Args:
         data (any): The Python data structure to serialize (e.g., dict, list).
@@ -21,6 +23,8 @@ def serialize_and_save_to_file(data, filename):
     """
     with open(filename, 'w') as file:
         json.dump(data, file)
+
+
 def load_and_deserialize(filename):
     """
     Loads data from a JSON file and deserializes it into a Python object.
@@ -32,7 +36,7 @@ def load_and_deserialize(filename):
         filename (str): The name of the file to load the data from.
 
     Returns:
-        any: The Python object resulting from the deserialization of the JSON file.
+        any: The Python object resulting from deserializing the JSON file.
     """
     with open(filename, 'r') as file:
         return json.load(file)

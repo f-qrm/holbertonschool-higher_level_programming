@@ -5,13 +5,15 @@ Module for serializing and deserializing custom Python objects using pickle.
 
 
 import pickle
+
+
 class CustomObject:
     """
     A class representing a custom object with basic attributes and
     methods for serialization and deserialization.
     """
 
-    def __init__(self, name:str, age: int, is_student: bool):
+    def __init__(self, name: str, age: int, is_student: bool):
         """
         Initialize a CustomObject instance.
 
@@ -23,6 +25,7 @@ class CustomObject:
         self.name = name
         self.age = age
         self.is_student = is_student
+
     def display(self):
         """
         Display the attributes of the CustomObject instance.
@@ -30,12 +33,13 @@ class CustomObject:
         print("Name: {}".format(self.name))
         print("Age: {}".format(self.age))
         print("Is Student: {}".format(self.is_student))
+
     def serialize(self, filename):
         """
         Serialize the object and save it to a file using pickle.
 
         Args:
-            filename (str): The name of the file to save the serialized object to.
+            filename (str): The name of the file to save the object to.
 
         Returns:
             None
@@ -45,16 +49,17 @@ class CustomObject:
                 pickle.dump(self, file)
         except Exception:
             return None
+
     @classmethod
     def deserialize(cls, filename):
         """
-        Load and deserialize a CustomObject instance from a file using pickle.
+        Load and deserialize a CustomObject instance from a file.
 
         Args:
             filename (str): The name of the file to load the object from.
 
         Returns:
-            CustomObject: The deserialized object if successful, or None on failure.
+            CustomObject: The deserialized object, or None on failure.
         """
         try:
             with open(filename, 'rb') as file:
