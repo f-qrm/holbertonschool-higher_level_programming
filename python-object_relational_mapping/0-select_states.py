@@ -30,10 +30,9 @@ if __name__ == "__main__":
         db=name_DB,
         port=3306
     )
-    cur = conn.cursor()  # on cree le curseur
+    cur = conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
-    rows = cur.fetchall()  # on recupere les resultat
-    #  (tous ce quon a demander avec le code SQL.)
+    rows = cur.fetchall()  # all rows returned by the SQL query above
 
     for row in rows:
         print(row)
