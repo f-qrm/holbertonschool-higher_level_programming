@@ -1,6 +1,10 @@
+#!/usr/bin/python3
+"""Create and seed the SQLite database used by task_04_db.py."""
 import sqlite3
 
+
 def create_database():
+    """Create the Products table and insert two sample rows."""
     conn = sqlite3.connect('products.db')
     cursor = conn.cursor()
     cursor.execute('''
@@ -19,6 +23,7 @@ def create_database():
        ''')
     conn.commit()
     conn.close()
+
 
 if __name__ == '__main__':
     create_database()
